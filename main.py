@@ -911,7 +911,7 @@ class ResumeBuilder:
             </script>
             """
             
-            st.components.v1.html(js_code, height=0)
+            components.html(js_code, height=0)
             st.success("✅ Opening in Overleaf...")
             
         except Exception as e:
