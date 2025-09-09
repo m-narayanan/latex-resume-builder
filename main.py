@@ -835,7 +835,7 @@ class ResumeBuilder:
                     gpa_text = f"CGPA: {edu['gpa']}" if edu.get('gpa') else ""
                     latex += f"""\\resumeSubheading
     {{{escape_latex(edu['degree'])}}} {{{gpa_text}}}
-    {{{escape_latex(edu['institution'])}, {escape_latex(edu.get('location', ''))}}}} {{{escape_latex(edu.get('dates', ''))}}}
+    {{{escape_latex(edu['institution'])}}}, {escape_latex(edu.get('location', ''))}}} {{{escape_latex(edu.get('dates', ''))}}}
 """
             latex += "\\resumeSubHeadingListEnd\n"
         
@@ -911,7 +911,7 @@ class ResumeBuilder:
             </script>
             """
             
-            components.html(js_code, height=0)
+            st.components.v1.html(js_code, height=0)
             st.success("✅ Opening in Overleaf...")
             
         except Exception as e:
